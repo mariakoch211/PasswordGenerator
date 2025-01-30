@@ -8,17 +8,38 @@
         Title="Генератор паролей" Height="600" Width="600"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
-    <Grid ShowGridLines="True">
+    <Grid Margin="20" ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
             
-
+   <!-- #region Настройки пароля-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+            <CheckBox Content="Цифры"/>
+            <CheckBox Grid.Row="2" Content="маленькие буквы a-z"/>
+            <CheckBox Grid.Row="4" Content="большие буквы A-Z"/>
+            <CheckBox Grid.Row="6" Content="Спец. символы"/>
+        </Grid>
+        
+   <!-- #endregion-->
     </Grid>
 </Window>
