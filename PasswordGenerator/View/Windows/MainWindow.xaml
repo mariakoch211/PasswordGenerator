@@ -35,11 +35,52 @@
                 <RowDefinition Height="10"/>
             </Grid.RowDefinitions>
             <CheckBox Content="Цифры"/>
-            <CheckBox Grid.Row="2" Content="маленькие буквы a-z"/>
-            <CheckBox Grid.Row="4" Content="большие буквы A-Z"/>
+            <CheckBox Grid.Row="2" Content="Маленькие буквы a-z"/>
+            <CheckBox Grid.Row="4" Content="Большие буквы A-Z"/>
             <CheckBox Grid.Row="6" Content="Спец. символы"/>
         </Grid>
         
    <!-- #endregion-->
+        
+        <!--#region Настройки генерации-->
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="кол-во символов"/>
+            <TextBox Grid.Row="2"/>
+
+            <TextBlock  Grid.Row="4" Text="кол-во паролей"/>
+            <TextBox Grid.Row="6"/>
+        </Grid>
+        <!--#endregion -->
+        <Button Name="GenerateBtn" Grid.Row="2"
+                Content="сгенерировать" Click="GenerateBtn_Click"/>
+
+        <!--#region список паролей-->
+        <Grid Grid.Row="4" Grid.ColumnSpan="3">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+            
+            <ProgressBar Value="30" Minimum="0" Maximum="100"/>
+            <ListBox Grid.Row="2">
+                
+            </ListBox>
+        </Grid>
+        <!--#endregion-->   
+
+        
+
     </Grid>
 </Window>
